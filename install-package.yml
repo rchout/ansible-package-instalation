@@ -1,0 +1,9 @@
+---
+- name: Install Chrony Package
+  hosts: student10.training.edgecloud.com
+  become: true
+  tasks:
+    - name: Ensure chrony package is installed
+      ansible.builtin.dnf:
+        name: chrony
+        state: latest
